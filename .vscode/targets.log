@@ -1,0 +1,329 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+
+# Make data base, printed on Wed Jul 27 13:40:25 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+ 
+# automatic
+?F = $(notdir $?)
+# makefile (from `Makefile', line 26)
+OBJ = $(addprefix $(OBJ_DIR), $(OBJ_FILES))
+# makefile (from `Makefile', line 25)
+SRC = $(addprefix $(SRC_DIR), $(SRC_FILES))
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/seheo/Desktop/push_swap
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 18)
+BLUE = \033[0;94m
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# makefile (from `Makefile', line 13)
+LIB_DIR = lib
+# makefile (from `Makefile', line 8)
+OBJ_DIR = ./obj/
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from `Makefile', line 10)
+INCS = -I ./include/
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cp3r0035hy/T/vscode-ipc-ec195c26-1acd-408b-b384-a59169d77649.sock
+# environment
+VSCODE_CWD = /
+# makefile (from `Makefile', line 24)
+OBJ_FILES = ${SRC_FILES:.c=.o}
+# environment
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
+# environment
+LaunchInstanceID = 135DB336-E395-425F-8BE9-0F22865CCE3B
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from `Makefile', line 19)
+END_COLOR = \033[0;39m
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.mW8hsfH24j/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /Users/seheo/Desktop/push_swap
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# makefile (from `Makefile', line 16)
+GREEN = \033[0;92m
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/seheo
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/seheo/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+LOGNAME = seheo
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# makefile (from `Makefile', line 9)
+HEADERS = ./include/push_swap.h
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# makefile (from `Makefile', line 3)
+CC = gcc
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = seheo
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from `Makefile', line 1)
+NAME = push_swap
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n000cp3r0035hy/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/seheo/Library/Application Support/Code/1.67.2-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000004.Electron
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from `Makefile', line 17)
+YELLOW = \033[0;93m
+# makefile (from `Makefile', line 14)
+LIBFT_A = ./lib/libft.a
+# automatic
++F = $(notdir $+)
+# environment
+__CF_USER_TEXT_ENCODING = 0x1961E:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# makefile (from `Makefile', line 7)
+SRC_DIR = ./src/
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# makefile (from `Makefile', line 6)
+LIBC = ar rc
+# environment
+SECURITYSESSIONID = 186a6
+# automatic
+^F = $(notdir $^)
+# makefile (from `Makefile', line 21)
+SRC_FILES = push_swap.c 
+# default
+SUFFIXES := 
+# makefile (from `Makefile', line 4)
+FLAGS = -Wall -Werror -Wextra
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+ 
+# environment
+VSCODE_PID = 55749
+# variable set hash-table stats:
+# Load=81/1024=8%, Rehash=0, Collisions=4/115=3%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777225, inode 2468165): 12 files, no impossibilities.
+# ./src (device 16777225, inode 2473686): 5 files, no impossibilities so far.
+# src (device 16777225, inode 2473686): 5 files, no impossibilities so far.
+
+# 22 files, no impossibilities in 3 directories.
+
+# Implicit Rules
+
+obj/%.o: ./src/%.c
+#  commands to execute (from `Makefile', line 39):
+	@$(CC) -c $< -o $@ $(INCS)
+	
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+all: obj/ push_swap
+#  Phony target (prerequisite of .PHONY).
+#  Command-line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+.PHONY: all clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+obj/push_swap.o: src/push_swap.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `push_swap'
+#  Last modified 2022-07-27 13:40:09
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 39):
+	@$(CC) -c $< -o $@ $(INCS)
+	
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-27 13:38:32
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/push_swap.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-27 13:35:31
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 50):
+	@rm -rf $(NAME)
+	@rm -rf $(LIBFT_A)
+	@rm -rf $(OBJ_DIR)
+	@echo "$(YELLOW)$(NAME) fclean"
+	
+
+obj/:
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-27 13:40:09
+#  File has been updated.
+#  Successfully updated.
+#  commands to execute (from `Makefile', line 43):
+	@mkdir $(OBJ_DIR)
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 46):
+	@rm -rf $(OBJ)
+	@make clean -C $(LIB_DIR)
+	@echo "$(YELLOW)$(NAME) clean"
+	
+
+push_swap: obj/push_swap.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-07-27 13:40:10
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 32):
+	echo "$(GREEN)make $(LIB_DIR)"
+	@make -C $(LIB_DIR)
+	@$(CC) $(OBJ) $(LIBFT_A) -o $(NAME)
+	@echo "$(GREEN)$(NAME) compiled"
+	
+
+# files hash-table stats:
+# Load=12/1024=1%, Rehash=0, Collisions=0/38=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Wed Jul 27 13:40:25 2022
+
+ 
