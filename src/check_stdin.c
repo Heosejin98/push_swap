@@ -6,7 +6,7 @@
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 13:26:58 by seheo             #+#    #+#             */
-/*   Updated: 2022/07/28 19:49:32 by seheo            ###   ########.fr       */
+/*   Updated: 2022/07/28 20:34:12 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void check_int(char **argv)
 	int j;
 
 	i = 0;
-	while(argv[0] != 0)
+	while(argv[i] != 0)
 	{
 		j = 0;
 		if(argv[i][0] == '\0')
@@ -62,17 +62,17 @@ char	**check_stdin(int argc, char **argv)
 {
 	char	**result;
 
+	argv++;
 	if (argc == 1)
 		ft_error("Error(one arg)");
 	else if (argc == 2)
-	{
+	{	
 		check_int(argv);
-		result = ft_split(argv[1], ' ');
+		result = ft_split(argv[0], ' ');
 		check_duplicate(result);
 	}
 	else if (argc >= 3)
 	{
-		argv++;
 		check_int(argv);
 		check_duplicate(argv);
 		return (argv);
