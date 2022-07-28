@@ -3,6 +3,7 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "sstream": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "libft.h": "c"
     }
 }

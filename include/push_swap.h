@@ -6,7 +6,7 @@
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 17:39:54 by seheo             #+#    #+#             */
-/*   Updated: 2022/07/28 19:25:41 by seheo            ###   ########.fr       */
+/*   Updated: 2022/07/28 21:37:02 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int         ft_top(t_stack* stack);
 void        ft_push(t_stack* stack, int num);
 void        ft_pop(t_stack* stack);
 int         ft_is_empty(t_node *node);
+void        stack_init(char **num, t_stack *stack);
 
 void	    ft_error(char *str);
 char	    **check_stdin(int argc, char **argv);
