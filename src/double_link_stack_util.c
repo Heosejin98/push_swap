@@ -6,7 +6,7 @@
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 10:27:18 by seheo             #+#    #+#             */
-/*   Updated: 2022/07/27 10:27:39 by seheo            ###   ########.fr       */
+/*   Updated: 2022/07/28 18:58:47 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int ft_is_empty(t_node *node)
 {
     if(node == NULL)
-        return (0);
-    return (1);
+        return (1);
+    return (0);
 }

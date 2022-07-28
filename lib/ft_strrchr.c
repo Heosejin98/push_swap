@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sejin <sejin@student.42.fr>                +#+  +:+       +#+        */
+/*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 20:43:50 by sejin             #+#    #+#             */
-/*   Updated: 2022/03/20 23:20:26 by sejin            ###   ########.fr       */
+/*   Updated: 2022/04/26 19:09:23 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int	end;
+	size_t	s_len;
 
-	end = ft_strlen(str);
-	while (end <= 0)
-	{
-		if (str[end] == c)
-			return ((char *)str);
-		end--;
-	}
+	s_len = ft_strlen(str);
+	while (s_len != 0 && str[s_len] != (char)c)
+		s_len--;
+	if (str[s_len] == (char)c)
+		return ((char *)(str + s_len));
 	return (0);
 }
-

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void    print_nbr(int n, int fd)
+void	print_nbr(int n, int fd)
 {
 	if (n != 0)
 	{

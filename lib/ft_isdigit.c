@@ -6,15 +6,13 @@
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 18:19:52 by sejin             #+#    #+#             */
-/*   Updated: 2022/07/27 13:32:34 by seheo            ###   ########.fr       */
+/*   Updated: 2022/07/28 17:14:42 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-bool	ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (true);
-	return (false);
+	if ((c >= '0' && c <= '9') || c == ' ')
+		return (1);
+	return (0);
 }

@@ -18,9 +18,12 @@ YELLOW		= \033[0;93m
 BLUE		= \033[0;94m
 END_COLOR	= \033[0;39m
 
-SRC_FILES	= push_swap.c \
-#			double_link_stack.c \
+SRC_FILES	= error.c \
+			check_stdin.c \
+			push_swap.c \
+			double_link_stack.c \
 			double_link_stack_util.c
+
 OBJ_FILES	= ${SRC_FILES:.c=.o}
 SRC			= $(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJ			= $(addprefix $(OBJ_DIR), $(OBJ_FILES))
