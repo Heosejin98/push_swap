@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   stack_swap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/27 10:33:15 by seheo             #+#    #+#             */
-/*   Updated: 2022/07/29 20:41:39 by seheo            ###   ########.fr       */
+/*   Created: 2022/07/28 21:52:35 by seheo             #+#    #+#             */
+/*   Updated: 2022/07/29 20:30:13 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 #include "../lib/libft.h"
 
-int main(int argc, char **argv)
+void	top_swap(t_stack **stack, char *s)
 {
-    t_stack*    stack_a;
-	t_stack*    stack_b;
-    char        **res;
+	t_node	*top_node;
+	t_node	*prev_node;
+	int		temp;
+	
+	top_node = (* stack)->top;
+	prev_node = (* stack)->top->prev;	
 
-    stack_a = ft_stack_create();
-    stack_b = ft_stack_create();
-    
-	res = check_stdin(argc, argv);
-	stack_init(res, stack_a);
-    
-    
-    printStack(stack_a);
-    top_swap(&stack_a, "sa");
-    printStack(stack_a);
-
-    push_a(stack_a, stack_b);
-    printf("a 배열\n");
-    printStack(stack_a);
-    printf("b 배열\n");
-    printStack(stack_b);
-
+	if (top_node && top_node->prev)
+	{
+		temp = prev_node->data;
+		prev_node->data = top_node->data;
+		top_node->data = temp;
+		if(ft_strcmp(s, "no") != 1)
+			print_message(s);
+	}
 }
+
+void	double_swap(t_stack **stack_a, t_stack **stack_b)
+{
+	top_swap(stack_a, "no");
+	top_swap(stack_b, "no");
+	print_message("ss");
+}
+
 

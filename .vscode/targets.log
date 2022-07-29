@@ -5,11 +5,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE.
 
- 
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Fri Jul 29 18:14:33 2022
+# Make data base, printed on Fri Jul 29 20:33:57 2022
 
 # Variables
 
@@ -18,9 +17,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# makefile (from `Makefile', line 31)
+# makefile (from `Makefile', line 32)
 OBJ = $(addprefix $(OBJ_DIR), $(OBJ_FILES))
-# makefile (from `Makefile', line 30)
+# makefile (from `Makefile', line 31)
 SRC = $(addprefix $(SRC_DIR), $(SRC_FILES))
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
@@ -54,7 +53,7 @@ VSCODE_LOGS = /Users/seheo/Library/Application Support/Code/logs/20220729T100908
 INCS = -I ./include/
 # environment
 VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cp3r0035hy/T/vscode-ipc-cf67fcb0-d8e0-40b9-bbb9-591cb482579d.sock
-# makefile (from `Makefile', line 29)
+# makefile (from `Makefile', line 30)
 OBJ_FILES = ${SRC_FILES:.c=.o}
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
@@ -159,7 +158,8 @@ SECURITYSESSIONID = 186a6
 # automatic
 ^F = $(notdir $^)
 # makefile (from `Makefile', line 21)
-SRC_FILES = error.c check_stdin.c push_swap.c double_link_stack.c double_link_stack_util.c stack_controller.c print_message.c
+ 
+SRC_FILES = error.c check_stdin.c push_swap.c double_link_stack.c double_link_stack_util.c stack_swap.c print_message.c stack_move.c
 # default
 SUFFIXES := 
 # makefile (from `Makefile', line 4)
@@ -182,15 +182,15 @@ VSCODE_PID = 83146
 # Directories
 
 # . (device 16777225, inode 2468165): 12 files, no impossibilities.
-# ./src (device 16777225, inode 2473686): 9 files, no impossibilities so far.
-# src (device 16777225, inode 2473686): 9 files, no impossibilities so far.
+# ./src (device 16777225, inode 2473686): 8 files, no impossibilities so far.
+# src (device 16777225, inode 2473686): 8 files, no impossibilities so far.
 
-# 30 files, no impossibilities in 3 directories.
+# 28 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
 obj/%.o: ./src/%.c
-#  commands to execute (from `Makefile', line 44):
+#  commands to execute (from `Makefile', line 45):
 	@$(CC) -c $< -o $@ $(INCS)
 	
 
@@ -206,21 +206,15 @@ obj/check_stdin.o: src/check_stdin.c
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 44):
+#  commands to execute (from `Makefile', line 45):
 	@$(CC) -c $< -o $@ $(INCS)
 	
 
-obj/double_link_stack.o: src/double_link_stack.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `double_link_stack'
-#  Last modified 2022-07-29 15:44:12
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 44):
-	@$(CC) -c $< -o $@ $(INCS)
-	
+# Not a target:
+obj/double_link_stack.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: obj/ push_swap
 #  Phony target (prerequisite of .PHONY).
@@ -238,23 +232,36 @@ all: obj/ push_swap
 #  File has not been updated.
 
 # Not a target:
-src/double_link_stack_util.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-29 17:52:30
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+obj/stack_swap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 obj/push_swap.o: src/push_swap.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `push_swap'
-#  Last modified 2022-07-29 18:04:24
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/push_swap.o
+# automatic
+# % := 
+# automatic
+# * := push_swap
+# automatic
+# + := src/push_swap.c
+# automatic
+# | := 
+# automatic
+# < := src/push_swap.c
+# automatic
+# ^ := src/push_swap.c
+# automatic
+# ? := src/push_swap.c
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 44):
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  commands to execute (from `Makefile', line 45):
 	@$(CC) -c $< -o $@ $(INCS)
 	
 
@@ -267,7 +274,7 @@ obj/push_swap.o: src/push_swap.c
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-29 17:47:34
+#  Last modified 2022-07-29 20:33:56
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -281,7 +288,7 @@ obj/error.o: src/error.c
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 44):
+#  commands to execute (from `Makefile', line 45):
 	@$(CC) -c $< -o $@ $(INCS)
 	
 
@@ -289,48 +296,16 @@ obj/error.o: src/error.c
 src/check_stdin.c:
 #  Implicit rule search has been done.
 #  Last modified 2022-07-29 13:48:01
- 
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-src/double_link_stack.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-29 15:44:07
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-obj/stack_controller.o: src/stack_controller.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `stack_controller'
-#  Last modified 2022-07-29 18:09:55
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj/stack_controller.o
-# automatic
-# % := 
-# automatic
-# * := stack_controller
-# automatic
-# + := src/stack_controller.c
-# automatic
-# | := 
-# automatic
-# < := src/stack_controller.c
-# automatic
-# ^ := src/stack_controller.c
-# automatic
-# ? := src/stack_controller.c
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  commands to execute (from `Makefile', line 44):
-	@$(CC) -c $< -o $@ $(INCS)
-	
+obj/stack_move.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 obj/print_message.o:
@@ -341,7 +316,7 @@ obj/print_message.o:
 # Not a target:
 src/push_swap.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-29 18:03:36
+#  Last modified 2022-07-29 20:33:25
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -352,7 +327,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 55):
+#  commands to execute (from `Makefile', line 56):
 	@rm -rf $(NAME)
 	@rm -rf $(LIBFT_A)
 	@rm -rf $(OBJ_DIR)
@@ -361,10 +336,10 @@ fclean: clean
 
 obj/:
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-29 18:09:55
+#  Last modified 2022-07-29 20:33:27
 #  File has been updated.
 #  Successfully updated.
-#  commands to execute (from `Makefile', line 48):
+#  commands to execute (from `Makefile', line 49):
 	@mkdir $(OBJ_DIR)
 	
 
@@ -383,15 +358,6 @@ src/error.c:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-src/stack_controller.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-29 18:10:02
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
 re: fclean all
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -403,40 +369,34 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 51):
+#  commands to execute (from `Makefile', line 52):
 	@rm -rf $(OBJ)
 	@make clean -C $(LIB_DIR)
 	@echo "$(YELLOW)$(NAME) clean"
 	
 
-push_swap: obj/error.o obj/check_stdin.o obj/push_swap.o obj/double_link_stack.o obj/double_link_stack_util.o obj/stack_controller.o obj/print_message.o
+push_swap: obj/error.o obj/check_stdin.o obj/push_swap.o obj/double_link_stack.o obj/double_link_stack_util.o obj/stack_swap.o obj/print_message.o obj/stack_move.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-29 18:09:55
+#  Last modified 2022-07-29 20:32:36
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  commands to execute (from `Makefile', line 37):
+#  commands to execute (from `Makefile', line 38):
 	echo "$(GREEN)make $(LIB_DIR)"
 	@make -C $(LIB_DIR) 
 	@$(CC) $(OBJ) $(LIBFT_A) -o $(NAME)
 	@echo "$(GREEN)$(NAME) compiled"
 	
 
-obj/double_link_stack_util.o: src/double_link_stack_util.c
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `double_link_stack_util'
-#  Last modified 2022-07-29 17:52:33
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 44):
-	@$(CC) -c $< -o $@ $(INCS)
-	
+# Not a target:
+obj/double_link_stack_util.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=23/1024=2%, Rehash=0, Collisions=0/70=0%
+# Load=21/1024=2%, Rehash=0, Collisions=0/60=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -448,6 +408,6 @@ obj/double_link_stack_util.o: src/double_link_stack_util.c
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Jul 29 18:14:33 2022
+# Finished Make data base on Fri Jul 29 20:33:57 2022
 
  

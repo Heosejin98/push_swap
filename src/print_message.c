@@ -6,16 +6,15 @@
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 17:43:35 by seheo             #+#    #+#             */
-/*   Updated: 2022/07/29 17:46:36 by seheo            ###   ########.fr       */
+/*   Updated: 2022/07/29 20:25:37 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 #include "../lib/libft.h"
 
-void    print_message(char c)
+void    print_message(char *c1)
 {
-    ft_putstr_fd("s", 1);
-	ft_putchar_fd(c, 1);
+    ft_putstr_fd(c1, 1);
 	ft_putstr_fd("\n", 1);
 }

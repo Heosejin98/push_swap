@@ -1,16 +1,11 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/seheo/Desktop/push_swap'
-mkdir ./obj/
-gcc -c src/error.c -o obj/error.o -I ./include/
-gcc -c src/check_stdin.c -o obj/check_stdin.o -I ./include/
 gcc -c src/push_swap.c -o obj/push_swap.o -I ./include/
-gcc -c src/double_link_stack.c -o obj/double_link_stack.o -I ./include/
-gcc -c src/double_link_stack_util.c -o obj/double_link_stack_util.o -I ./include/
-gcc -c src/stack_controller.c -o obj/stack_controller.o -I ./include/
-gcc -c src/print_message.c -o obj/print_message.o -I ./include/
+ 
+gcc -c src/stack_move.c -o obj/stack_move.o -I ./include/
 echo "\033[0;92mmake lib"
 make -C lib 
-gcc ./obj/error.o ./obj/check_stdin.o ./obj/push_swap.o ./obj/double_link_stack.o ./obj/double_link_stack_util.o ./obj/stack_controller.o ./obj/print_message.o ./lib/libft.a -o push_swap
+gcc ./obj/error.o ./obj/check_stdin.o ./obj/push_swap.o ./obj/double_link_stack.o ./obj/double_link_stack_util.o ./obj/stack_swap.o ./obj/print_message.o ./obj/stack_move.o ./lib/libft.a -o push_swap
 echo "\033[0;92mpush_swap compiled"
 make: Leaving directory `/Users/seheo/Desktop/push_swap'
  

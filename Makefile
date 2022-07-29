@@ -23,8 +23,9 @@ SRC_FILES	= error.c \
 			push_swap.c \
 			double_link_stack.c \
 			double_link_stack_util.c \
-			stack_controller.c \
-			print_message.c
+			stack_swap.c \
+			print_message.c \
+			stack_move.c
 
 OBJ_FILES	= ${SRC_FILES:.c=.o}
 SRC			= $(addprefix $(SRC_DIR), $(SRC_FILES))

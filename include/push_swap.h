@@ -6,7 +6,7 @@
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 17:39:54 by seheo             #+#    #+#             */
-/*   Updated: 2022/07/29 19:24:49 by seheo            ###   ########.fr       */
+/*   Updated: 2022/07/29 20:40:18 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,18 @@ typedef struct s_dlinked_list_stack
 
 t_stack     *ft_stack_create();
 t_node      *ft_node_init(int num);
-t_node      *ft_top(t_stack* stack);
-void        ft_push(t_stack* stack, int num);
-void        ft_pop(t_stack* stack);
+t_node      *ft_top(t_stack *stack);
+void        ft_push(t_stack *stack, int num);
+void        ft_pop(t_stack *stack);
 int         ft_is_empty(t_stack *stack);
 void        stack_init(char **num, t_stack *stack);
 
-void	    top_swap(t_stack **top_node, char c);
+void	    top_swap(t_stack **top_node, char *c);
+void	    double_swap(t_stack **stack_a, t_stack **stack_b);
+void        push_a(t_stack *out_stack, t_stack *in_stack);
 
 void	    ft_error(char *str);
-void        print_message(char c);
+void        print_message(char *c1);
 char	    **check_stdin(int argc, char **argv);
 
 //제출 전에 지울 것
