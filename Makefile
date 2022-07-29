@@ -22,7 +22,9 @@ SRC_FILES	= error.c \
 			check_stdin.c \
 			push_swap.c \
 			double_link_stack.c \
-			double_link_stack_util.c
+			double_link_stack_util.c \
+			stack_controller.c \
+			print_message.c
 
 OBJ_FILES	= ${SRC_FILES:.c=.o}
 SRC			= $(addprefix $(SRC_DIR), $(SRC_FILES))
@@ -33,7 +35,7 @@ all	: $(OBJ_DIR) $(NAME)
 
 $(NAME) : $(OBJ)
 	echo "$(GREEN)make $(LIB_DIR)"
-	@make -C $(LIB_DIR)
+	@make -C $(LIB_DIR) 
 	@$(CC) $(OBJ) $(LIBFT_A) -o $(NAME)
 #	@$(CC) $(FLAGS) $(OBJ) $(LIBFT_A) -o $(NAME)
 	@echo "$(GREEN)$(NAME) compiled"

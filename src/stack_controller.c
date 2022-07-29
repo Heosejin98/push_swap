@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   stack_controller.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/13 18:19:52 by sejin             #+#    #+#             */
-/*   Updated: 2022/07/29 12:55:36 by seheo            ###   ########.fr       */
+/*   Created: 2022/07/28 21:52:35 by seheo             #+#    #+#             */
+/*   Updated: 2022/07/29 19:56:14 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "../include/push_swap.h"
+#include "../lib/libft.h"
+#include <stdio.h>
+
+
+void	top_swap(t_stack **stack, char c)
 {
-	if ((c >= '0' && c <= '9') || c == ' ')
-		return (1);
-	else if(c == '+' || c == '-')
-		return (1);
-	return (0);
+	t_node	*top_node;
+	t_node	*prev_node;
+	t_node	temp;
+	
+	top_node = (* stack)->top;
+	prev_node = (* stack)->top->prev;	
+
+	if (top_node && top_node->prev)
+	{
+		temp.data = prev_node->data;
+		prev_node->data = top_node->data;
+		top_node->data = temp.data;
+		print_message(c);
+	}
 }
+

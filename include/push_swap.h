@@ -6,7 +6,7 @@
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 17:39:54 by seheo             #+#    #+#             */
-/*   Updated: 2022/07/28 21:37:02 by seheo            ###   ########.fr       */
+/*   Updated: 2022/07/29 19:24:49 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 
 #include    <unistd.h>
 #include    <stdlib.h>
-#include    <stdbool.h>
+
+//제출 전에 지울 것
+#include <stdio.h>
+
 
 //스택에 하나씩 쌓일 데이터 정의
 typedef struct s_stack_node
@@ -28,19 +31,26 @@ typedef struct s_stack_node
 //스택의 정보를 정의
 typedef struct s_dlinked_list_stack
 {
-    t_node*	top; 
-    int		size;//노드 갯수
+    t_node  *top; 
+    t_node  *bottom;
+    int		size;//노드 갯수ß
 }t_stack;
 
 t_stack     *ft_stack_create();
 t_node      *ft_node_init(int num);
-int         ft_top(t_stack* stack);
+t_node      *ft_top(t_stack* stack);
 void        ft_push(t_stack* stack, int num);
 void        ft_pop(t_stack* stack);
-int         ft_is_empty(t_node *node);
+int         ft_is_empty(t_stack *stack);
 void        stack_init(char **num, t_stack *stack);
 
+void	    top_swap(t_stack **top_node, char c);
+
 void	    ft_error(char *str);
+void        print_message(char c);
 char	    **check_stdin(int argc, char **argv);
+
+//제출 전에 지울 것
+void printStack(t_stack *stack);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 13:26:58 by seheo             #+#    #+#             */
-/*   Updated: 2022/07/28 21:13:00 by seheo            ###   ########.fr       */
+/*   Updated: 2022/07/29 13:48:01 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ static void check_int(char **argv)
 		j = 0;
 		if(argv[i][0] == '\0')
 			ft_error("Error(NULL)");
+		if(!ft_atoi(argv[i]))
+			ft_error("Error(No_int)");
 		while(argv[i][j] != 0)
 		{
 			if(!ft_isdigit(argv[i][j]))
@@ -50,7 +52,7 @@ static void check_duplicate(char **str)
 		j = i + 1;
 		while(j < col)
 		{	
-			if(ft_strcmp(str[i], str[j]) == 1)
+			if(ft_atoi(str[i]) == ft_atoi(str[j]))
 				ft_error("Error(duplicate number)");
 			j++;
 		}
