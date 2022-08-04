@@ -1,43 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_swap.c                                       :+:      :+:    :+:   */
+/*   stack_rotate_reverse.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/28 21:52:35 by seheo             #+#    #+#             */
-/*   Updated: 2022/08/04 12:09:08 by seheo            ###   ########.fr       */
+/*   Created: 2022/07/29 20:46:08 by seheo             #+#    #+#             */
+/*   Updated: 2022/08/04 12:24:19 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	top_swap(t_stack *stack)
+void	stack_rotate_rev(t_stack *stack)
 {
-	t_node	*top_node;
-	t_node	*prev_node;
-	int		temp;
+	int		i;
+	int		bottom_data;
 	int		type;
+	t_node	*cursor;
 
+	if (!stack)
+		return ;
+	i = 0;
+	bottom_data = stack->bottom->data;
+	cursor = stack->bottom;
 	type = stack->type;
-	top_node = stack->top;
-	prev_node = stack->top->prev;
-	if (top_node && top_node->prev)
+	while (i < stack->size - 1)
 	{
-		temp = prev_node->data;
-		prev_node->data = top_node->data;
-		top_node->data = temp;
-		print_message("s", type);
+		cursor->data = cursor->next->data;
+		cursor = cursor->next;
+		i++;
 	}
+	stack->top->data = bottom_data;
+	print_message("rr", type);
 }
 
-void	double_swap(t_stack *stack_a, t_stack *stack_b)
+void	double_rotate_rev(t_stack *stack_a, t_stack *stack_b)
 {
 	stack_a->type = NO_PRINT;
 	stack_b->type = NO_PRINT;
-	top_swap(stack_a);
-	top_swap(stack_b);
-	print_message("s", S);
+	stack_rotate_rev(stack_a);
+	stack_rotate_rev(stack_b);
+	print_message("rr", R);
 	stack_a->type = A;
 	stack_b->type = B;
 }

@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: seheo <seheo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 22:57:36 by sejin             #+#    #+#             */
-/*   Updated: 2022/04/26 15:51:05 by seheo            ###   ########.fr       */
+/*   Created: 2022/08/04 11:53:58 by seheo             #+#    #+#             */
+/*   Updated: 2022/08/04 11:53:59 by seheo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/push_swap.h"
 
 int	check_space(const char s)
 {
@@ -39,9 +39,9 @@ int	ft_atoi(const char *s)
 	while (s[i] && s[i] >= '0' && s[i] <= '9')
 	{
 		if (n * sign > 2147483647)
-			return (-1);
+			ft_error("Error(overflow)");
 		else if (n * sign < -2147483648)
-			return (0);
+			ft_error("Error(underflow)");
 		else
 			n = n * 10 + (s[i] - '0');
 		i++;

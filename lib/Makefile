@@ -6,7 +6,7 @@
 #    By: seheo <seheo@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/14 08:55:41 by seheo             #+#    #+#              #
-#    Updated: 2022/07/28 18:08:56 by seheo            ###   ########.fr        #
+#    Updated: 2022/08/03 15:50:35 by seheo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,7 @@ CC			=	gcc
 AR			=	ar rcs
 CFLAG		=	-Wall -Wextra -Werror
 
-SRC			=	ft_atoi.c\
-				ft_bzero.c\
+SRC			=	ft_bzero.c\
 				ft_calloc.c\
 				ft_isalnum.c\
 				ft_isalpha.c\

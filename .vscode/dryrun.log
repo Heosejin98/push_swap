@@ -1,11 +1,28 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory `/Users/seheo/Desktop/push_swap'
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/goinfre/seheo/push_swap'
+mkdir ./obj/
+gcc -c src/error.c -o obj/error.o -I ./include/
+gcc -c src/check_stdin.c -o obj/check_stdin.o -I ./include/
+gcc -c src/control_point.c -o obj/control_point.o -I ./include/
 gcc -c src/push_swap.c -o obj/push_swap.o -I ./include/
- 
+gcc -c src/double_link_stack.c -o obj/double_link_stack.o -I ./include/
+gcc -c src/double_link_stack_util.c -o obj/double_link_stack_util.o -I ./include/
+gcc -c src/stack_swap.c -o obj/stack_swap.o -I ./include/
+gcc -c src/print_message.c -o obj/print_message.o -I ./include/
 gcc -c src/stack_move.c -o obj/stack_move.o -I ./include/
+gcc -c src/ft_atoi.c -o obj/ft_atoi.o -I ./include/
+gcc -c src/quick_sort.c -o obj/quick_sort.o -I ./include/
+gcc -c src/sort_2.c -o obj/sort_2.o -I ./include/
+gcc -c src/sort_3.c -o obj/sort_3.o -I ./include/
+gcc -c src/sort_5.c -o obj/sort_5.o -I ./include/
+gcc -c src/sort_n_util.c -o obj/sort_n_util.o -I ./include/
+gcc -c src/sort_n.c -o obj/sort_n.o -I ./include/
+gcc -c src/sort_util.c -o obj/sort_util.o -I ./include/
+gcc -c src/stack_rotate.c -o obj/stack_rotate.o -I ./include/
+gcc -c src/stack_rotate_reverse.c -o obj/stack_rotate_reverse.o -I ./include/
 echo "\033[0;92mmake lib"
 make -C lib 
-gcc ./obj/error.o ./obj/check_stdin.o ./obj/push_swap.o ./obj/double_link_stack.o ./obj/double_link_stack_util.o ./obj/stack_swap.o ./obj/print_message.o ./obj/stack_move.o ./lib/libft.a -o push_swap
+gcc ./obj/error.o ./obj/check_stdin.o ./obj/control_point.o ./obj/push_swap.o ./obj/double_link_stack.o ./obj/double_link_stack_util.o ./obj/stack_swap.o ./obj/print_message.o ./obj/stack_move.o ./obj/ft_atoi.o ./obj/quick_sort.o ./obj/sort_2.o ./obj/sort_3.o ./obj/sort_5.o ./obj/sort_n_util.o ./obj/sort_n.o ./obj/sort_util.o ./obj/stack_rotate.o ./obj/stack_rotate_reverse.o ./lib/libft.a -o push_swap
 echo "\033[0;92mpush_swap compiled"
-make: Leaving directory `/Users/seheo/Desktop/push_swap'
+make: Leaving directory `/goinfre/seheo/push_swap'
  

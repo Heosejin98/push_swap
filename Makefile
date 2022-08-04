@@ -20,12 +20,23 @@ END_COLOR	= \033[0;39m
 
 SRC_FILES	= error.c \
 			check_stdin.c \
+			control_point.c \
 			push_swap.c \
 			double_link_stack.c \
 			double_link_stack_util.c \
 			stack_swap.c \
 			print_message.c \
-			stack_move.c
+			stack_move.c \
+			ft_atoi.c \
+			quick_sort.c \
+			sort_2.c \
+			sort_3.c \
+			sort_5.c \
+			sort_n_util.c \
+			sort_n.c \
+			sort_util.c \
+			stack_rotate.c \
+			stack_rotate_reverse.c \
 
 OBJ_FILES	= ${SRC_FILES:.c=.o}
 SRC			= $(addprefix $(SRC_DIR), $(SRC_FILES))
